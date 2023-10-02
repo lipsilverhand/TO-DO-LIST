@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do-list</title>
+    <link rel="stylesheet" href="styles/content.css">
+</head>
+
+
+<body>
+    <div class="main">
+        <h1>My To-do List</h1>
+        <ul>
+            <% for(let i = 0; i < newListItems.length; i++) { %>
+                <div class="minor">
+                    <input class="strike" type="checkbox">
+                    <li> <%= newListItems[i] %> </li>
+                </div>
+            <% } %>
+        </ul>
+    
+        <form action="/submit" method="POST">
+            <input class="type" name="newItem" type="text" placeholder="Type here..." required>
+            <input class="add" type="submit" value="Add">
+        </form>
+    </div>
+
+    <footer>
+        @2023-present by Lipsilverhand
+    </footer>
+</body>
+
+
+
+
+</html>
